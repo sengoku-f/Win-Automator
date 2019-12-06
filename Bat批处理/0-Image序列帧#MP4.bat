@@ -1,3 +1,4 @@
+:: 序列帧-MP4 v1.0
 cd "%~dp1"
 for /r %%a in (*.png;*.jpg) do (
     echo file '%%a' >> images.txt
