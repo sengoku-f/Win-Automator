@@ -1,7 +1,7 @@
 # Win-Automator
 Windows自动化程序和工作流程!
 
-我的高效 Win 的收藏夹脚本和工作流集合！
+我的高效 Win 的收藏夹脚本和工作流集合!
 
 **包括不限于以下功能:**
 
@@ -15,7 +15,7 @@ Windows自动化程序和工作流程!
 
 你可以将常用 bat 脚本放入 Windows 右键 `发送到 `文件夹中:
 
-> 只需将 bat 脚本文件复制到`~/xxxxx/xxxxx`
+> 只需将 bat 脚本文件复制到`C:\Users\(你的用户名)\AppData\Roaming\Microsoft\Windows\SendTo`
 
 
 ### 依赖软件:
@@ -34,7 +34,7 @@ Windows自动化程序和工作流程!
 您可以通过以下方式轻松安装：
 
 ``` bash
-scoop install 'ffmpeg' 'ImageMagick' 'gifsicle' 'youtube-dl' 'potrace'
+scoop install 'ffmpeg' 'ImageMagick' 'UnxUtils' 'gifsicle' 'youtube-dl' 'potrace'
 ```
 ### 选项 2：自行下载安装
 
@@ -42,13 +42,58 @@ scoop install 'ffmpeg' 'ImageMagick' 'gifsicle' 'youtube-dl' 'potrace'
 
 ## 使用方法
 
-🚧施工中
+### 图像序列帧转MP4
+
+帮助转换PNG&JPG序列帧为x264编码的MP4格式的bat批处理脚本
+
+脚本包含以下几种，分别用于不同的环境：
+
+- 0-Image序列帧#MP4 v0.1.bat
+- 0-Image序列帧#MP4.bat
+- 0-Image序列帧#MP4#自定义.bat
+- 0-Image序列帧#MOV RLE Alpha v1.3#单独.bat
+- 0-Image序列帧#MOV PNG Alpha v1.3#单独.bat
+- 0-PNG-MP4#上下通道.bat & 0-PNG-MP4#左右通道.bat
+
+**实例：**
+
+![2_1200_lossy80.gif](https://ws1.sinaimg.cn/large/b85b28acgy1g9sytwy23lg21bl0xckjm.gif)
+
+![3_800_lossy80.gif](https://ws1.sinaimg.cn/large/b85b28acgy1g9sz2zy4qtg20vp0m8npi.gif)
+
+**注意：**
+
+- 序列帧的命名请注意前导0，例如命名为 000.png、001.png … 010.png、011.png …
+- `FFmpeg` 是必需的依赖项，用于将序列帧编码成MP4
+- `UnxUtils` 是可选依赖项，用于创建列表文件输入到 FFmpeg 中
+- 如果你不想安装 `UnxUtils` 在你的电脑上，你可以使用 `0-Image序列帧#MP4 v0.1.bat` ，在处理大量的文件上面它将比 `UnxUtils`  慢一点
+
 
 ### 注意事项
-🚧施工中
+所有脚本能在 Windows 10 专业版 1803 上测试过，当你的电脑无法运行脚本；请排查是否包括（但不限于）以下几个问题：
 
-### TODO
-🚧施工中
+- 是否已安装依赖项
+
+- 是否已将依赖软件添加环境变量
+
+- 文件名是否有特殊的字符包括（但不限于）: 
+
+  `? * / \ < > : " | 空格符、制表符、退格符和字符 @ # $ & ( ) - 等`
+
+- 运行的系统是Windows？
+
+### 脚本列表
+|                 名称                  |                        作用                        |
+| :-----------------------------------: | :------------------------------------------------: |
+|           0-Image序列帧#MP4           |      转换 PNG & JPG 序列帧为 x264 编码的 MP4       |
+|       0-Image序列帧#MP4#自定义        |           支持自定义参数，例如帧速率 FPS           |
+|        0-Image序列帧#MP4 v0.1         |               不需要安装 `UnxUtils`                |
+| 0-Image序列帧#MOV RLE Alpha v1.3#单独 | 转换PNG序列帧为带有 **Alpha** 通道的 RLE 编码的MOV |
+| 0-Image序列帧#MOV PNG Alpha v1.3#单独 | 转换PNG序列帧为带有 **Alpha** 通道的 PNG 编码的MOV |
+|          0-PNG-MP4#上下通道           |  PNG序列帧分离 **Alpha** 通道；用于 **U3D** 抠像   |
+|          0-PNG-MP4#左右通道           |  PNG序列帧分离 **Alpha** 通道；用于 **U3D** 抠像   |
+|            0-PNG序列帧#GIF            |             转换 PNG 序列帧为 GIF 动画             |
+|                                       |                                                    |
 
 ## 作者
 * SENGOKU donxj@live.com
