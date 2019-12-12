@@ -59,7 +59,7 @@ scoop install 'ffmpeg' 'ImageMagick' 'UnxUtils' 'gifsicle' 'youtube-dl' 'potrace
 
 ![2_1200_lossy80.gif](http://ws1.sinaimg.cn/large/b85b28acgy1g9sytwy23lg21bl0xckjm.gif)
 
-![3_800_lossy80.gif](http://ws1.sinaimg.cn/large/b85b28acgy1g9sz2zy4qtg20vp0m8npi.gif)
+![3_600_lossy80.gif](http://ww1.sinaimg.cn/large/b85b28acgy1g9txza8dq6g20ns0gob2c.gif)
 
 **注意：**
 
