@@ -28,6 +28,7 @@ Windows自动化程序和工作流程!
 * (可选)[Gifsicle](https://www.lcdf.org/gifsicle/) gif 图片压缩
 * (可选)[Youtube-dl](https://github.com/ytdl-org/youtube-dl) 从视频网站下载视频
 * (可选)[ghostscript](https://www.ghostscript.com/) 处理矢量图像
+* (可选)[ffmpeg-normalize](https://github.com/slhck/ffmpeg-normalize) 使用ffmpeg批量标准化音频
 
 ### 选项 1：通过 [scoop](https://scoop.sh/) 安装
 
@@ -132,9 +133,9 @@ scoop install 'ffmpeg' 'ImageMagick' 'UnxUtils' 'gifsicle' 'youtube-dl' 'ghostsc
 
 ### **实例：**
 
-![2_1200_lossy80.gif](http://ws1.sinaimg.cn/large/b85b28acgy1g9sytwy23lg21bl0xckjm.gif)
+![2_800_lossy80.gif](https://raw.githubusercontent.com/sengoku-f/Win-Automator/master/image/2_800_lossy80.gif?token=AHNAESYUQE3B6P6U3XJGGVS6BGXP4)
 
-![3_600_lossy80.gif](http://ww1.sinaimg.cn/large/b85b28acgy1g9txza8dq6g20ns0gob2c.gif)
+![3_600_lossy80.gif](https://raw.githubusercontent.com/sengoku-f/Win-Automator/master/image/3_600_lossy80.gif?token=AHNAES5EGPQIYKX7YL2RNBS6BGXT6)
 
 ### 注意事项
 
