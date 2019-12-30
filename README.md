@@ -133,9 +133,9 @@ scoop install 'ffmpeg' 'ImageMagick' 'UnxUtils' 'gifsicle' 'youtube-dl' 'ghostsc
 
 ### **实例：**
 
-![2_800_lossy80.gif](https://raw.githubusercontent.com/sengoku-f/Win-Automator/master/image/2_800_lossy80.gif?token=AHNAESYUQE3B6P6U3XJGGVS6BGXP4)
+![2_800_lossy80.gif](https://ws1.sinaimg.cn/large/b85b28acgy1g9sytwy23lg21bl0xckjm.gif)
 
-![3_600_lossy80.gif](https://raw.githubusercontent.com/sengoku-f/Win-Automator/master/image/3_600_lossy80.gif?token=AHNAES5EGPQIYKX7YL2RNBS6BGXT6)
+![3_600_lossy80.gif](http://ww1.sinaimg.cn/large/b85b28acgy1g9txza8dq6g20ns0gob2c.gif)
 
 ### 注意事项
 
