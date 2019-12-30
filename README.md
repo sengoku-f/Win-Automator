@@ -114,6 +114,7 @@ scoop install 'ffmpeg' 'ImageMagick' 'UnxUtils' 'gifsicle' 'youtube-dl' 'ghostsc
 帮助快速进行图片处理的bat批处理脚本
 
 脚本包含以下几种，分别用于不同的环境：
+
 |            名称            | 作用                                  |
 | :------------------------: | :------------------------------------ |
 |       0-修剪PNG.bat        | 去除PNG透明部分,保留最小尺寸          |
