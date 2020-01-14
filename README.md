@@ -16,6 +16,8 @@ Windows自动化程序和工作流程!
 你可以将常用 bat 脚本放入 Windows 右键 `发送到 `文件夹中:
 
 > 只需将 bat 脚本文件复制到`C:\Users\<你的用户名>\AppData\Roaming\Microsoft\Windows\SendTo`
+>
+> > 打开 Win10 文件资源管理器窗口，然后在资源管理器窗口的地址栏中输入 `shell:sendto` ，回车即可打开 “SendTo（发送到）” 目录。
 
 
 ### 依赖软件:
