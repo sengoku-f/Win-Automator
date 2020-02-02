@@ -1,7 +1,7 @@
 # Win-Automator
-Windows自动化程序和工作流程!
+🚀 Windows 自动化程序和工作流程！
 
-我的高效 Win 的收藏夹脚本和工作流集合!
+我的高效 Win 的收藏夹脚本和工作流集合！
 
 **包括不限于以下功能:**
 
@@ -11,9 +11,11 @@ Windows自动化程序和工作流程!
 * 更多…..
 
 ## 安装:  
-下载文件进行解压;双击运行 bat ，或者将文件拖到 bat 上面自动运行
+[下载文件](https://github.com/sengoku-f/Win-Automator/archive/master.zip)进行解压并正确安装依赖软件。
 
-你可以将常用 bat 脚本放入 Windows 右键 `发送到 `文件夹中:
+双击运行 bat ，或者将文件拖到 bat 上面自动运行。
+
+你可以将常用 bat 脚本放入 Windows 右键 `发送到 `文件夹中：
 
 > 只需将 bat 脚本文件复制到`C:\Users\<你的用户名>\AppData\Roaming\Microsoft\Windows\SendTo`
 >
@@ -32,7 +34,7 @@ Windows自动化程序和工作流程!
 * (可选)[ghostscript](https://www.ghostscript.com/) 处理矢量图像
 * (可选)[ffmpeg-normalize](https://github.com/slhck/ffmpeg-normalize) 使用ffmpeg批量标准化音频
 
-### 选项 1：通过 [scoop](https://scoop.sh/) 安装
+### 选项 1：通过 [scoop](https://scoop.sh/) 安装（推荐）
 
 您可以通过以下方式轻松安装：
 
@@ -151,11 +153,11 @@ choco install 'ffmpeg' 'ImageMagick' 'UnxUtils' 'gifsicle' 'youtube-dl' 'ghostsc
 - `ghostscript` 是可选依赖项，用于处理矢量图像，如果你不想安装 `ghostscript` 在你的电脑上，你将无法使用 `0-图片转为PNG.bat` 将矢量图像`ai`/`svg`转换为png
 
 
-### **实例：**
+### 实例：
 
-![2_800_lossy80.gif](https://ws1.sinaimg.cn/large/b85b28acgy1g9sytwy23lg21bl0xckjm.gif)
+<img src="https://wx1.sinaimg.cn/large/b85b28acgy1gbi5wjm3w3g20vq0m8b29.gif" alt="2_800_lossy80.gif" style="zoom:100%;" />
 
-![3_600_lossy80.gif](http://ww1.sinaimg.cn/large/b85b28acgy1g9txza8dq6g20ns0gob2c.gif)
+<img src="https://wx1.sinaimg.cn/large/b85b28acgy1gbi5xfn24eg20ns0gob2c.gif" alt="3_600_lossy80.gif" style="zoom:100%;" />
 
 ### 注意事项
 
