@@ -11,7 +11,7 @@
 * 更多…..
 
 ## 安装:  
-[下载文件](https://github.com/sengoku-f/Win-Automator/archive/master.zip)进行解压并正确安装依赖软件。
+[下载文件](https://github.com/sengoku-f/Win-Automator/releases)进行解压并正确安装依赖软件。
 
 双击运行 bat ，或者将文件拖到 bat 上面自动运行。
 
@@ -220,4 +220,4 @@ choco install 'ffmpeg' 'ImageMagick' 'UnxUtils' 'gifsicle' 'youtube-dl' 'ghostsc
 
 ## 作者
 * SENGOKU donxj@live.com
-* 如果出现问题可以联系我👆
+* 如果出现问题可以提 **issues** 或者联系我👆
