@@ -1,0 +1,8 @@
+set hour=%time:~,2%
+if "%time:~,1%"==" " set hour=0%time:~1,1%
+
+echo %date:~0,4%%date:~5,2%%date:~8,2%%hour%%time:~3,2%%time:~6,2%
+set imageTime=%date:~0,4%-%date:~5,2%-%date:~8,2%-%hour%%time:~3,2%%time:~6,2%
+
+cd "%~dp1"
+magick "*.{png,jpeg,jpg}" "PSD-%imageTime%.psd"
