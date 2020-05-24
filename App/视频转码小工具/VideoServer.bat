@@ -3,14 +3,18 @@ REM CODER BY Sengoku 2020-04-29
 REM 优化代码,添加自定义参数设置
 
 CD /D %~DP0
-SET PATH="%~dp0";"%~dp0bin";%PATH%
+SET PATH="%UserProfile%\bin";"%~dp0bin";%PATH%
 MD output
-if exist "%~dp0\bin\ffmpeg.exe" (
-    echo 初始化主程序
+if exist "%UserProfile%\bin\ffmpeg.exe" (
+    echo 初始化主程序%UserProfile%
   ) else (
-    echo 找不到主程序,请重新安装！本窗口五秒后自动关闭！
-    ping /n 5 127.0.0.1 >nul
-    Exit
+      if exist "%~dp0\bin\ffmpeg.exe" (
+        echo 初始化主程序%~dp0
+        ) else (
+            echo 找不到主程序,请重新安装！本窗口五秒后自动关闭！
+            ping /n 5 127.0.0.1 >nul
+            Exit
+            )
 )
 if "%~1" == "" (
     echo 无法获取拖入文件路径，请重试！本窗口五秒后自动关闭！
@@ -72,21 +76,21 @@ echo.
 
 if "%chosequality%" LEQ "4" (
     for %%a in (%*) do (
-    ffmpeg.exe -i "%%~fa" -c:v libx264 -preset 8 -x264opts crf=%quality%:keyint=infinite:min-keyint=1:scenecut=60:partitions=all:direct=auto:me=umh:merange=32:subme=10:trellis=2:rc-lookahead=60:ref=6:bframes=6:b-adapt=2:deblock=1,1:qcomp=0.5:psy-rd=0.3,0:aq-mode=2:aq-strength=0.8 -r 25 -vf "scale='-2':'min(%resize%,ih)':flags=lanczos" -pix_fmt yuv420p -c:a aac -b:a 128k -ar 44100 -y ".\output\%%~na_x264.mp4"
+    ffmpeg -i "%%~fa" -c:v libx264 -preset 8 -x264opts crf=%quality%:keyint=infinite:min-keyint=1:scenecut=60:partitions=all:direct=auto:me=umh:merange=32:subme=10:trellis=2:rc-lookahead=60:ref=6:bframes=6:b-adapt=2:deblock=1,1:qcomp=0.5:psy-rd=0.3,0:aq-mode=2:aq-strength=0.8 -r 25 -vf "scale='-2':'min(%resize%,ih)':flags=lanczos" -pix_fmt yuv420p -c:a aac -b:a 128k -ar 44100 -y ".\output\%%~na_x264.mp4"
   )
   goto :end
 )
 if "%chosequality%" == "5" (
     call :setting
     for %%a in (%*) do (
-    ffmpeg.exe -i "%%~fa" -c:v libx264 -preset 8 -x264opts crf=%quality%:keyint=infinite:min-keyint=1:scenecut=60:partitions=all:direct=auto:me=umh:merange=32:subme=10:trellis=2:rc-lookahead=60:ref=6:bframes=6:b-adapt=2:deblock=1,1:qcomp=0.5:psy-rd=0.3,0:aq-mode=2:aq-strength=0.8 -r 25 -vf "scale='-2':'min(%resize%,ih)':flags=lanczos" -pix_fmt yuv420p -c:a aac -b:a 128k -ar 44100 -y ".\output\%%~na_x264_CRF%quality%_%resize%p.mp4"
+    ffmpeg -i "%%~fa" -c:v libx264 -preset 8 -x264opts crf=%quality%:keyint=infinite:min-keyint=1:scenecut=60:partitions=all:direct=auto:me=umh:merange=32:subme=10:trellis=2:rc-lookahead=60:ref=6:bframes=6:b-adapt=2:deblock=1,1:qcomp=0.5:psy-rd=0.3,0:aq-mode=2:aq-strength=0.8 -r 25 -vf "scale='-2':'min(%resize%,ih)':flags=lanczos" -pix_fmt yuv420p -c:a aac -b:a 128k -ar 44100 -y ".\output\%%~na_x264_CRF%quality%_%resize%p.mp4"
   )
 )
 if "%chosequality%" == "6" (
-    for %%a in (%*) do ffmpeg.exe -i "%%~fa" -vf "fps=25,scale=-2:360:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 -y ".\output\%%~na.gif"
+    for %%a in (%*) do ffmpeg -i "%%~fa" -vf "fps=25,scale=-2:360:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 -y ".\output\%%~na.gif"
 )
 if "%chosequality%" == "7" (
-    for %%a in (%*) do ffmpeg.exe -i "%%~fa" -c:a copy -y ".\output\%%~na.aac"
+    for %%a in (%*) do ffmpeg -i "%%~fa" -c:a copy -y ".\output\%%~na.aac"
 )
 
 :end

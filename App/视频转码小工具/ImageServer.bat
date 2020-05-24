@@ -2,7 +2,7 @@
 REM CODER BY Sengoku 2020-04-24
 
 CD /D %~DP0
-SET PATH="%~dp0";"%~dp0bin";%PATH%
+SET PATH="%UserProfile%\bin";"%~dp0bin";%PATH%
 MD output
 :start
 cls
