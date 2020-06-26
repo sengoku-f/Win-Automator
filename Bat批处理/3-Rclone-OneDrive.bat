@@ -10,4 +10,10 @@ rclone sync "C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\SendTo" on
 REM 复制 results
 rclone copy onedrive:"Windows 软件\stairspeedtest_reborn_win64\results" onedrive:"科学上网\测速图" -P --log-file="C:\Users\Administrator\Rclone_win.log" --include *.{png,jpg}
 
+REM 同步 scoop
+REM 先压缩一遍
+cd "C:\Users\Administrator"
+7z a scoop.zip scoop\
+rclone copy "C:\Users\Administrator\scoop.zip" onedrive:"储藏库\bin" -P --log-file="C:\Users\Administrator\Rclone_win.log"
+
 msg %username% /time:2 Rclone 同步完成也可能同步失败。日志保存在用户目录下。 BY Sengoku
