@@ -1,3 +1,4 @@
+@echo off & title MP4 → PNG → GIF By Sengoku v1.0
 cd "%~dp1"
 mkdir temp
 for %%a in (*.mp4) do ffmpeg -i "%%~fa" "temp\%%~na_%%06d.png"

@@ -1,4 +1,4 @@
-@echo off &title 序列帧转换视频 By Sengoku v1.0
+@echo off & title 序列帧转换视频 By Sengoku v1.0
 REM CODER BY Sengoku 2020-04-24
 
 CD /D %~DP0

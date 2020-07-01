@@ -1,4 +1,4 @@
-@echo off &title 视频转码工具箱 By Sengoku v1.1
+@echo off & title 视频转码工具箱 By Sengoku v1.1
 REM CODER BY Sengoku 2020-04-29
 REM 优化代码,添加自定义参数设置
 

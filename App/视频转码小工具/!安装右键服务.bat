@@ -1,4 +1,4 @@
-@ECHO OFF & TITLE 添加右键服务
+@echo off & title 添加右键服务
 >NUL 2>&1 REG.exe query "HKU\S-1-5-19" || (
     ECHO SET UAC = CreateObject^("Shell.Application"^) > "%TEMP%\Getadmin.vbs"
     ECHO UAC.ShellExecute "%~f0", "%1", "", "runas", 1 >> "%TEMP%\Getadmin.vbs"

@@ -1,3 +1,4 @@
+@echo off & title 图片转为 PSD (时间命名) By Sengoku v1.0
 set hour=%time:~,2%
 if "%time:~,1%"==" " set hour=0%time:~1,1%
 

@@ -1,4 +1,4 @@
-::修改分辨率(单独) v1.3
+@echo off & title FFmpeg 视频裁剪 (单独) By Sengoku v1.3
 REM 添加手动输入分辨率
 cd "%~dp1"
 set videoSIZENAME=1920x1080

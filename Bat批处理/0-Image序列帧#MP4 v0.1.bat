@@ -1,3 +1,4 @@
+@echo off & title 序列帧 → MP4 (Beta) By Sengoku v0.1
 cd "%~dp1"
 for /r %%a in (*.png;*.jpg) do (
     echo file '%%a' >> images.txt

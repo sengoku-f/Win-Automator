@@ -1,3 +1,4 @@
+@echo off & title 获取文件属性 By Sengoku v1.0
 echo 无后缀名： %~n1
 echo 有后缀名： %~nx1
 echo 绝对路径： %1

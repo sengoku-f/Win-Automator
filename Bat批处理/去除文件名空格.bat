@@ -1,5 +1,5 @@
 :renameNoSpace  [/R]  [FolderPath]
-@echo off
+@echo off & title 批量去除文件名空格 By Sengoku v1.0
 setlocal disableDelayedExpansion
 if /i "%~1"=="/R" (
   set "forOption=%~1 %2"

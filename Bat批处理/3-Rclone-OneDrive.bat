@@ -1,4 +1,4 @@
-@echo off &title Rclone 同步 SendTo → onedrive By Sengoku v1.1
+@echo off & title Rclone 同步 SendTo → onedrive By Sengoku v1.1
 REM 设置代理
 set http_proxy=socks5://127.0.0.1:1080
 set https_proxy=socks5://127.0.0.1:1080

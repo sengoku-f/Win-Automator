@@ -1,4 +1,4 @@
-@echo off
+@echo off & title 图片缩小 50% By Sengoku v1.0
 setlocal enabledelayedexpansion
 set str=
 for %%i in (%*) do (set str=!str! %%i)

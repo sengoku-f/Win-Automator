@@ -1,8 +1,8 @@
-:: FFmpeg批量转码x264 720P v1.1.2
-:: 删除level=4.1
-:: 添加 -pix_fmt yuv420p 色彩格式兼容
-:: 添加自定义操作
-:: 修改匹配符(*.mp4;*.mov;*.flv;*.mkv;*.avi)为(%*),匹配所选多个文件
+@echo off & title FFmpeg 批量转码 x264 (自定义) By Sengoku v1.1.2
+REM 删除level=4.1
+REM 添加 -pix_fmt yuv420p 色彩格式兼容
+REM 添加自定义操作
+REM 修改匹配符(*.mp4;*.mov;*.flv;*.mkv;*.avi)为(%*),匹配所选多个文件
 set CRF=28
 set /p CRF=输入视频压缩质量CRF,范围0-51,数字越大质量越小,默认28:
 set SIZE=720

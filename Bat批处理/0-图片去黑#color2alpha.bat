@@ -1,6 +1,6 @@
-:: color2alpha去黑 v1.0
-:: 修改为COLOR2ALPHA
-:: 修改匹配符(*.jpg)为(%*),匹配所选多个文件
+@echo off & title 图片去除黑色 (color2alpha) By Sengoku v1.0
+REM 修改为COLOR2ALPHA
+REM 修改匹配符(*.jpg)为(%*),匹配所选多个文件
 cd "%~dp1"
 mkdir ".\COLOR2ALPHA"
 for %%a in (%*) do (
