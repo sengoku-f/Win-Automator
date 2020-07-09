@@ -1,5 +1,6 @@
-@echo off & title FFmpeg æ‰¹é‡è½¬ç  x264 (720P) By Sengoku v1.1.2
-REM åˆ é™¤level=4.1
-REM æ·»åŠ -pix_fmt yuv420p è‰²å½©æ ¼å¼å…¼å®¹
-REM ä¿®æ”¹åŒ¹é…ç¬¦(*.mp4;*.mov;*.flv;*.mkv;*.avi)ä¸º(%*),åŒ¹é…æ‰€é€‰å¤šä¸ªæ–‡ä»¶
-for %%a in (%*) do ffmpeg -i "%%~fa" -c:v libx264 -preset 8 -x264opts crf=23.5:keyint=infinite:min-keyint=1:scenecut=60:partitions=all:direct=auto:me=umh:merange=32:subme=10:trellis=2:rc-lookahead=60:ref=6:bframes=6:b-adapt=2:deblock=1,1:qcomp=0.5:psy-rd=0.3,0:aq-mode=2:aq-strength=0.8 -r 25 -vf "scale='-2':'min(720,ih)':flags=lanczos" -pix_fmt yuv420p -c:a aac -b:a 128k -ar 44100 -y "%%~na_x264_720p.mp4"
+@echo off & title FFmpeg ÅúÁ¿×ªÂë x264 (720P) By Sengoku v1.1.3
+REM ĞŞ¸´ Win ËÑË÷Â·¾¶ "%%~ni" ¸ÄÎª "%%~dpni"
+REM É¾³ılevel=4.1
+REM Ìí¼Ó-pix_fmt yuv420p É«²Ê¸ñÊ½¼æÈİ
+REM ĞŞ¸ÄÆ¥Åä·û(*.mp4;*.mov;*.flv;*.mkv;*.avi)Îª(%*),Æ¥ÅäËùÑ¡¶à¸öÎÄ¼ş
+for %%i in (%*) do ffmpeg -i "%%~fi" -c:v libx264 -preset 8 -x264opts crf=23.5:keyint=infinite:min-keyint=1:scenecut=60:partitions=all:direct=auto:me=umh:merange=32:subme=10:trellis=2:rc-lookahead=60:ref=6:bframes=6:b-adapt=2:deblock=1,1:qcomp=0.5:psy-rd=0.3,0:aq-mode=2:aq-strength=0.8 -r 25 -vf "scale='-2':'min(720,ih)':flags=lanczos" -pix_fmt yuv420p -c:a aac -b:a 128k -ar 44100 -y "%%~dpni_x264_720p.mp4"
