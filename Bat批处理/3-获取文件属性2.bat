@@ -1,13 +1,16 @@
-@echo off & title Х▌╥Е▐√Ф√┤Д╩╤Е╠·Ф─╖ 2 By Sengoku v1.0
+@echo off & title ╩Ях║нд╪ЧйТпт 2 By Sengoku v1.1
 for %%i in (%*) do (
-	echo %%i
-	echo %%~i
-   	echo %%~fi
-   	echo %%~di
-   	echo %%~pi
-   	echo %%~ni
-   	echo %%~xi   
-   	echo %%~ti
-   	echo %%~zi
+  echo.
+  echo мЙуШ╣днд╪ЧцШ    %%i
+  echo мЙх╚╨о╦Я╣дб╥╬╤цШ    %%~i
+  echo нд╪Ч╣д╬Ь╤тб╥╬╤пео╒    %%~fi
+  echo нд╪ЧкЫтз╣дел╥Ш    %%~di
+  echo нд╪Ч╣дб╥╬╤ё╛╡╩╟Э╨╛ел╥Ш    %%~pi
+	echo нд╪Ч╣дб╥╬╤ё╛╡╩╟Э╨╛ю╘у╧цШ    %%~dpni
+  echo нд╪Ч╣днд╪ЧцШё╛╡╩╟Э╨╛ю╘у╧цШ    %%~ni
+  echo нд╪Ч╣дю╘у╧цШ    %%~xi
+  echo нд╪Ч╣дио╢нпч╦дй╠╪Д    %%~ti
+  echo нд╪Ч╣д╢Сп║    %%~zi
+  echo.
 )
 pause
