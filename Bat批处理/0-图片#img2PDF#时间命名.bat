@@ -11,7 +11,7 @@ REM 获取时间
 set hour=%time:~,2%
 if "%time:~,1%"==" " set hour=0%time:~1,1%
 REM echo %date:~0,4%%date:~5,2%%date:~8,2%%hour%%time:~3,2%%time:~6,2%
-set imageTime=%date:~0,4%-%date:~5,2%-%date:~8,2%-%hour%%time:~32%%time:~62%
+set imageTime=%date:~0,4%-%date:~5,2%-%date:~8,2%-%hour%%time:~3,2%%time:~6,2%
 
 REM 设置路径
 set image_path=
@@ -25,4 +25,4 @@ REM 开始转换
 echo.
 echo 正在将图片转换为 PDF
 echo.
-img2pdf %image_path% -o "%~dp1%imageTime%.pdf"
+img2pdf %image_path% -o "%~dp1PDF-%imageTime%.pdf"
