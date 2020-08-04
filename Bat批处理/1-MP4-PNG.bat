@@ -1,3 +1,5 @@
-@echo off & title MP4 â†’ PNG åºåˆ—å¸§ By Sengoku v1.0
+@echo off & title MP4 ¡ú PNG ĞòÁĞÖ¡ By Sengoku v1.1
+REM ¸üĞÂÎÄ¼ş¼ĞÃû³Æ
+REM ĞŞ¸ÄÆ¥Åä·û(*.mp4)Îª(%*),Æ¥ÅäËùÑ¡ÎÄ¼ş
 cd "%~dp1"
-for %%a in (*.mp4) do mkdir "%%~na_png" & ffmpeg -i "%%~fa" "%%~na_png\%%~na_%%06d.png"
+for %%a in (%*) do mkdir "%%~na" & ffmpeg -i "%%~fa" "%%~na\%%~na_%%06d.png"

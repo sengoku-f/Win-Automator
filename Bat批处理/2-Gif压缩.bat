@@ -1,9 +1,14 @@
-@echo off & title GIF å‹ç¼© (720P) By Sengoku v1.0
-REM æ·»åŠ è‡ªå®šä¹‰æ“ä½œ
-REM ä¿®æ”¹åŒ¹é…ç¬¦(*.gif)ä¸º(%*),åŒ¹é…æ‰€é€‰å¤šä¸ªæ–‡ä»¶
+@echo off & title GIF Ñ¹Ëõ (720P) By Sengoku v1.1
+REM Ìí¼Ó×Ô¶¨Òå²Ù×÷
+REM ĞŞ¸ÄÆ¥Åä·û(*.gif)Îª(%*),Æ¥ÅäËùÑ¡¶à¸öÎÄ¼ş
 cd "%~dp1"
-set size=1200
-set /p size=resize:
+set size=720
+set /p size=ÊäÈë·Ö±æÂÊ£¬Ä¬ÈÏ720:
+set colors=256
+set /p colors=ÊäÈëµ÷É«°å£¬Ä¬ÈÏ256:
+set lossyGIF=80
+set /p lossy=ÊäÈëÖÊÁ¿£¬Ä¬ÈÏ80:
+
 for %%a in (%*) do (
-    gifsicle --resize-fit-height %size% -O3 --lossy=80 --colors 256 "%%~fa" -o "%%~na_%size%_lossy80.gif"
+    gifsicle --resize-fit-height %size% -O3 --delay=8 --lossy=%lossyGIF% --colors %colors% "%%~fa" -o "%%~na_%size%_lossy%lossyGIF%.gif"
 )
