@@ -31,10 +31,10 @@ if exist "%~1\" (
 )
 
 :end
-cls
+REM cls
 echo.
 REM msg %username% /time:2 IOS 切图分类完成。 BY Sengoku
-ECHO. &ECHO 转码完成也可能转码失败。本窗口将在五秒后自动关闭。
+ECHO. &ECHO 切图分类完成。本窗口自动关闭。BY Sengoku
 REM &PAUSE >NUL 2>NUL
 REM ping /n 3 127.0.0.1 >nul
 Exit
