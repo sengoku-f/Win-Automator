@@ -1,13 +1,13 @@
 echo off & title IOS 切图分类 By Sengoku v1.2
 REM -------------------------------------------------
 REM 定位到父目录
-cd "%~dp1"
+cd /d "%~dp1"
 if exist "%~1\" (
   echo.
   echo "%~1" 是文件夹
   echo.
   echo 定位到文件夹
-  cd "%~1"
+  cd /d "%~1"
   echo.
   echo 开始分类文件
   echo.
@@ -20,7 +20,7 @@ if exist "%~1\" (
     echo "%~1" 是文件
     echo.
     echo 定位到文件所在目录
-    cd "%~dp1"
+    cd /d "%~dp1"
     echo.
     echo 开始分类文件
     echo.
