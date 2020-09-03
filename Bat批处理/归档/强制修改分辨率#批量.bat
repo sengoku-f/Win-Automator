@@ -1,3 +1,3 @@
-@echo off & title å›¾ç‰‡æ‰¹é‡å¼ºåˆ¶ä¿®æ”¹åˆ†è¾¨ç‡ By Sengoku v1.0
+@echo off & title Í¼Æ¬ÅúÁ¿Ç¿ÖÆĞŞ¸Ä·Ö±æÂÊ By Sengoku v1.0
 cd "%~dp1"
 for %%a in (*.png) do magick "%%~fa" -resize 2180x1051! "%%~na.png"

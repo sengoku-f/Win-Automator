@@ -1,4 +1,4 @@
-@echo off & title MP4 â†’ PNG â†’ GIF (480P) By Sengoku v1.0
+@echo off & title MP4 ¡ú PNG ¡ú GIF (480P) By Sengoku v1.0
 cd "%~dp1"
 mkdir temp
 for %%a in (*.mp4) do ffmpeg -i "%%~fa" -vf "scale='min(480,iw)':'-1'" "temp\%%~na_%%04d.png"

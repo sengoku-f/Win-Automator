@@ -1,4 +1,4 @@
-@echo off & title åºåˆ—å¸§ â†’ MP4 (Beta) By Sengoku v0.1
+@echo off & title ÐòÁÐÖ¡ ¡ú MP4 (Beta) By Sengoku v0.1
 cd "%~dp1"
 for /r %%a in (*.png;*.jpg) do (
     echo file '%%a' >> images.txt

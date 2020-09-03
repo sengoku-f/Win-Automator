@@ -1,4 +1,4 @@
-@echo off & title 鍥剧墖寮哄埗淇敼鍒嗚鲸鐜囧埌 8000x1200 By Sengoku v1.0
+@echo off & title 图片强制修改分辨率到 8000x1200 By Sengoku v1.0
 cd "%~dp1"
 mkdir back
 xcopy "%~nx1" "back"

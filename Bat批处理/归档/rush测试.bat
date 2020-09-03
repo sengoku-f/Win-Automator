@@ -1,4 +1,4 @@
-@echo off & title rush æµ‹è¯•è„šæœ¬ By Sengoku v1.0
+@echo off & title rush ²âÊÔ½Å±¾ By Sengoku v1.0
 setlocal enabledelayedexpansion
 set str=
 for %%i in (%*) do (set str=!str! %%i)

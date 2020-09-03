@@ -1,27 +1,27 @@
-@echo off & title åºåˆ—å¸§ â†’ MP4 (å·¦å³é€šé“) By Sengoku v1.5.2
-REM å°† output_rgb.mp4 output_alpha.mp4 images.txt æ–‡ä»¶æ”¾å…¥å­æ–‡ä»¶å¤¹ä¸­,å¯ä»¥å¹¶è¡Œè¿è¡Œå¤šä¸ª
-REM ä¿®å¤ç©ºæ ¼è·¯å¾„,"%%i"æ— æ³•å¼•ç”¨ç©ºæ ¼è·¯å¾„,å¯ä¿®æ”¹ä¸º%%i(ä¸å¸¦åŒå¼•å·),%%~i(åˆ é™¤å¼•å·),%%~fi(æ‰©å±•åˆ°ä¸€ä¸ªå®Œå…¨åˆæ ¼çš„è·¯å¾„å)
-REM æ›´æ–°å¾ªç¯(*)ä¸ºæ‰€é€‰å®šæ–‡ä»¶å¤¹(%*),å¸§é€Ÿç‡ä¿®å¤
-REM ä¿®å¤å¥‡å¶åƒç´ 
-REM æ›´æ–°ä¸ºä½¿ç”¨æ–‡ä»¶å¤¹æ‰§è¡Œ
+@echo off & title ĞòÁĞÖ¡ ¡ú MP4 (×óÓÒÍ¨µÀ) By Sengoku v1.5.2
+REM ½« output_rgb.mp4 output_alpha.mp4 images.txt ÎÄ¼ş·ÅÈë×ÓÎÄ¼ş¼ĞÖĞ,¿ÉÒÔ²¢ĞĞÔËĞĞ¶à¸ö
+REM ĞŞ¸´¿Õ¸ñÂ·¾¶,"%%i"ÎŞ·¨ÒıÓÃ¿Õ¸ñÂ·¾¶,¿ÉĞŞ¸ÄÎª%%i(²»´øË«ÒıºÅ),%%~i(É¾³ıÒıºÅ),%%~fi(À©Õ¹µ½Ò»¸öÍêÈ«ºÏ¸ñµÄÂ·¾¶Ãû)
+REM ¸üĞÂÑ­»·(*)ÎªËùÑ¡¶¨ÎÄ¼ş¼Ğ(%*),Ö¡ËÙÂÊĞŞ¸´
+REM ĞŞ¸´ÆæÅ¼ÏñËØ
+REM ¸üĞÂÎªÊ¹ÓÃÎÄ¼ş¼ĞÖ´ĞĞ
 REM -------------------------------------------------
-REM å®šä½åˆ°çˆ¶ç›®å½•
+REM ¶¨Î»µ½¸¸Ä¿Â¼
 cd "%~dp1"
-REM è®¾ç½®å¸§é€Ÿç‡
+REM ÉèÖÃÖ¡ËÙÂÊ
 set fps=25
-REM å¼€å§‹å¾ªç¯
+REM ¿ªÊ¼Ñ­»·
 for /d %%i in (%*) do ( 
-    REM ç”Ÿæˆæ¸…å•
+    REM Éú³ÉÇåµ¥
     ufind "%%~i" -regex ".*\.png\|.*\.jpg" -maxdepth 1 -mindepth 1 > "%%~i\images.txt" && sed -i "/./{s/^/file '&/;s/$/&'/}" "%%~i\images.txt"
-    REM è½¬æ¢rgbè§†é¢‘
+    REM ×ª»»rgbÊÓÆµ
     ffmpeg -r %fps% -f concat -safe 0 -i "%%~i\images.txt" -c:v libx264 -vf "scale=ceil(iw/2)*2:ceil(ih/2)*2" -r %fps% -pix_fmt yuv420p -an -y "%%~i\output_rgb.mp4"
-    REM è½¬æ¢alphaè§†é¢‘
+    REM ×ª»»alphaÊÓÆµ
     ffmpeg -r %fps% -f concat -safe 0 -i "%%~i\images.txt" -vf "[in] scale=ceil(iw/2)*2:ceil(ih/2)*2, format=rgba, split [T1], fifo, lutrgb=r=maxval:g=maxval:b=maxval,[T2] overlay [out]; [T1] fifo, lutrgb=r=minval:g=minval:b=minval [T2]" -an -y "%%~i\output_alpha.mp4"
-    REM åˆå¹¶è§†é¢‘
+    REM ºÏ²¢ÊÓÆµ
     ffmpeg -i "%%~i\output_rgb.mp4" -i "%%~i\output_alpha.mp4" -filter_complex hstack=inputs=2 -pix_fmt yuv420p -an -y "%%~i.mp4"
-    REM æ¸…ç†æ–‡ä»¶
+    REM ÇåÀíÎÄ¼ş
     del /q "%%~i\output_rgb.mp4" "%%~i\output_alpha.mp4" "%%~i\images.txt"
 )
-REM å¾ªç¯ç»“æŸ
-REM åˆ é™¤æ¸…å•
+REM Ñ­»·½áÊø
+REM É¾³ıÇåµ¥
 rem del /q images.txt

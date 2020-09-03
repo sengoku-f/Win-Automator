@@ -1,5 +1,5 @@
 :renameNoSpace  [/R]  [FolderPath]
-@echo off & title æ‰¹é‡å»é™¤æ–‡ä»¶åç©ºæ ¼ By Sengoku v1.0
+@echo off & title ÅúÁ¿È¥³ıÎÄ¼şÃû¿Õ¸ñ By Sengoku v1.0
 setlocal disableDelayedExpansion
 if /i "%~1"=="/R" (
   set "forOption=%~1 %2"

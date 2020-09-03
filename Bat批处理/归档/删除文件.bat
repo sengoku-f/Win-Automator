@@ -1,3 +1,3 @@
-@echo off & title åˆ é™¤æ–‡ä»¶ By Sengoku v1.0
+@echo off & title É¾³ýÎÄ¼þ By Sengoku v1.0
 DEL /F /A /Q \\?\%1
 RD /S /Q \\?\%1

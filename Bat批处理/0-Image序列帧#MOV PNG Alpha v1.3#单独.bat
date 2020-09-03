@@ -1,12 +1,12 @@
-@echo off & title åºåˆ—å¸§ â†’ MOV By Sengoku v1.3
+@echo off & title ĞòÁĞÖ¡ ¡ú MOV By Sengoku v1.3
 REM Quicktime Animation
 REM -------------------------------------------------
-REM å®šä½åˆ°çˆ¶ç›®å½•
+REM ¶¨Î»µ½¸¸Ä¿Â¼
 cd "%~dp1"
-REM ç”Ÿæˆæ¸…å•
+REM Éú³ÉÇåµ¥
 ufind "%~1" -regex ".*\.png\|.*\.jpg" -maxdepth 1 -mindepth 1 > "%~1\images.txt" && sed -i "/./{s/^/file '&/;s/$/&'/}" "%~1\images.txt"
-REM æ‰§è¡Œè½¬æ¢
+REM Ö´ĞĞ×ª»»
 ffmpeg -r 25 -f concat -safe 0 -i "%~1\images.txt" -c:v png -compression_level 100 -pred mixed -an -y "%~1_png.mov"
 REM ffmpeg -r 25 -f concat -safe 0 -i "%~1\images.txt" -c:v qtrle -y "%~1_qtrle.mov"
-REM åˆ é™¤æ¸…å•
+REM É¾³ıÇåµ¥
 del /q "%~1\images.txt"

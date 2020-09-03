@@ -1,4 +1,4 @@
-@echo off & title 缁熻 Bat 鑴氭湰杩愯鏃堕棿 By Sengoku v1.0
+@echo off & title 统计 Bat 脚本运行时间 By Sengoku v1.0
 @setlocal
 
 set start=%time%

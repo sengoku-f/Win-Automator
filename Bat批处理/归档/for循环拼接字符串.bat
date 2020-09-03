@@ -1,14 +1,14 @@
-@echo off & title forå¾ªç¯æ‹¼æ¥å­—ç¬¦ä¸²
+@echo off & title forÑ­»·Æ´½Ó×Ö·û´®
 
-REM å¼€å¯å»¶æ—¶å˜é‡
+REM ¿ªÆôÑÓÊ±±äÁ¿
 setlocal enabledelayedexpansion
 
 set var=
-REM å¼€å§‹å¾ªç¯
+REM ¿ªÊ¼Ñ­»·
 for %%i in (path\*.png) do (
     echo "%%i"
     set var=!var! "%%i"
 )
 
-echo æ‹¼æ¥ç»“æœ:"%var%"
+echo Æ´½Ó½á¹û:"%var%"
 pause

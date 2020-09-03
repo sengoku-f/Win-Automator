@@ -1,5 +1,5 @@
-@echo off & title ä¿®å‰ª PNG é€æ˜åŒºåŸŸ By Sengoku v1.1
-REM ä¿®æ”¹åŒ¹é…ç¬¦(*.png)ä¸º(%*),åŒ¹é…æ‰€é€‰å¤šä¸ªæ–‡ä»¶
+@echo off & title ĞŞ¼ô PNG Í¸Ã÷ÇøÓò By Sengoku v1.1
+REM ĞŞ¸ÄÆ¥Åä·û(*.png)Îª(%*),Æ¥ÅäËùÑ¡¶à¸öÎÄ¼ş
 cd "%~dp1"
 mkdir back
 for %%a in (%*) do xcopy "%%~fa" "back" & magick "%%~fa" -trim "%%~na.png"

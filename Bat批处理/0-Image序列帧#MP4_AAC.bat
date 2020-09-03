@@ -1,23 +1,23 @@
-@echo off & title åºåˆ—å¸§ â†’ MP4_AAC By Sengoku v1.5.2
-REM éœ€è¦ä¾èµ–é¡¹ UnxUtils
-REM æ·»åŠ åŒå AAC éŸ³è½¨
-REM å°† images.txt æ–‡ä»¶æ”¾å…¥å­æ–‡ä»¶å¤¹ä¸­,å¯ä»¥å¹¶è¡Œè¿è¡Œå¤šä¸ª
-REM ä¿®å¤ç©ºæ ¼è·¯å¾„,"%%i"æ— æ³•å¼•ç”¨ç©ºæ ¼è·¯å¾„,å¯ä¿®æ”¹ä¸º%%i(ä¸å¸¦åŒå¼•å·),%%~i(åˆ é™¤å¼•å·),%%~fi(æ‰©å±•åˆ°ä¸€ä¸ªå®Œå…¨åˆæ ¼çš„è·¯å¾„å)
-REM æ›´æ–°å¾ªç¯(*)ä¸ºæ‰€é€‰å®šæ–‡ä»¶å¤¹(%*),å¸§é€Ÿç‡ä¿®å¤
-REM ä¿®å¤å¥‡å¶åƒç´ &åŠé€æ˜åƒç´ 
-REM æ›´æ–°ä¸ºä½¿ç”¨æ–‡ä»¶å¤¹æ‰§è¡Œ
+@echo off & title ĞòÁĞÖ¡ ¡ú MP4_AAC By Sengoku v1.5.2
+REM ĞèÒªÒÀÀµÏî UnxUtils
+REM Ìí¼ÓÍ¬Ãû AAC Òô¹ì
+REM ½« images.txt ÎÄ¼ş·ÅÈë×ÓÎÄ¼ş¼ĞÖĞ,¿ÉÒÔ²¢ĞĞÔËĞĞ¶à¸ö
+REM ĞŞ¸´¿Õ¸ñÂ·¾¶,"%%i"ÎŞ·¨ÒıÓÃ¿Õ¸ñÂ·¾¶,¿ÉĞŞ¸ÄÎª%%i(²»´øË«ÒıºÅ),%%~i(É¾³ıÒıºÅ),%%~fi(À©Õ¹µ½Ò»¸öÍêÈ«ºÏ¸ñµÄÂ·¾¶Ãû)
+REM ¸üĞÂÑ­»·(*)ÎªËùÑ¡¶¨ÎÄ¼ş¼Ğ(%*),Ö¡ËÙÂÊĞŞ¸´
+REM ĞŞ¸´ÆæÅ¼ÏñËØ&°ëÍ¸Ã÷ÏñËØ
+REM ¸üĞÂÎªÊ¹ÓÃÎÄ¼ş¼ĞÖ´ĞĞ
 REM -------------------------------------------------
-REM å®šä½åˆ°çˆ¶ç›®å½•
+REM ¶¨Î»µ½¸¸Ä¿Â¼
 cd "%~dp1"
-REM è®¾ç½®å¸§é€Ÿç‡
+REM ÉèÖÃÖ¡ËÙÂÊ
 set fps=25
-REM å¼€å§‹å¾ªç¯
+REM ¿ªÊ¼Ñ­»·
 for /d %%i in (%*) do ( 
-    REM ç”Ÿæˆæ¸…å•
+    REM Éú³ÉÇåµ¥
     ufind "%%~i" -regex ".*\.png\|.*\.jpg" -maxdepth 1 -mindepth 1 > "%%~i\images.txt" && sed -i "/./{s/^/file '&/;s/$/&'/}" "%%~i\images.txt"
-    REM æ‰§è¡Œè½¬æ¢
+    REM Ö´ĞĞ×ª»»
     ffmpeg -r %fps% -f concat -safe 0 -i "%%~i\images.txt" -i "%%~i.aac" -c:v libx264 -preset 8 -x264opts crf=23.5:keyint=infinite:min-keyint=1:scenecut=60:partitions=all:direct=auto:me=umh:merange=32:subme=10:trellis=2:rc-lookahead=60:ref=6:bframes=6:b-adapt=2:deblock=1,1:qcomp=0.5:psy-rd=0.3,0:aq-mode=2:aq-strength=0.8 -filter_complex "color=black,format=rgb24,fps=fps=%fps%[c];[c][0]scale2ref[c][i];[c][i]overlay=format=auto:shortest=1,setsar=1,pad=ceil(iw/2)*2:ceil(ih/2)*2" -r %fps% -pix_fmt yuv420p -c:a aac -b:a 128k -ar 44100 -y "%%~i_AAC.mp4"
-    REM åˆ é™¤æ¸…å•
+    REM É¾³ıÇåµ¥
     del /q "%%~i\images.txt"
 )
-REM å¾ªç¯ç»“æŸ
+REM Ñ­»·½áÊø

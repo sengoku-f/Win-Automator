@@ -1,4 +1,4 @@
-@echo off & title åºåˆ—å¸§ â†’ GIF By Sengoku v1.0
+@echo off & title ĞòÁĞÖ¡ ¡ú GIF By Sengoku v1.0
 cd "%~dp1"
 magick -fuzz 1.6% -delay 4 -loop 0 "*.png" -layers OptimizePlus -layers OptimizeTransparency "out.gif"
 gifsicle -O3 --lossy=80 --colors 256 "out.gif" -o "out_o.gif"

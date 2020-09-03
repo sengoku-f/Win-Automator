@@ -1,8 +1,8 @@
 chcp 65001
 cd "%~dp1"
-:: å¼€å§‹å¾ªçŽ¯
+:: ¿ªÊ¼Ñ­»·
 for /d %%i in (*) do ( 
-    :: ç”Ÿæˆæ¸…å•
+    :: Éú³ÉÇåµ¥
     ufind "%%i" -regex ".*\.png\|.*\.jpg" -maxdepth 1 -mindepth 1 > %%i.txt && sed -i "/./{s/^/file '&/;s/$/&'/}" %%i.txt
 )
 ufind "%cd%" -maxdepth 1 -type f -name "*.txt" | rush "ffmpeg -r 25 -f concat -safe 0 -i {} -c:v libx264 -y {}.mp4"

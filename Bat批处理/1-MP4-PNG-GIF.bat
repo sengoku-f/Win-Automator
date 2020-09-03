@@ -1,4 +1,4 @@
-@echo off & title MP4 â†’ PNG â†’ GIF By Sengoku v1.0
+@echo off & title MP4 ¡ú PNG ¡ú GIF By Sengoku v1.0
 cd "%~dp1"
 mkdir temp
 for %%a in (*.mp4) do ffmpeg -i "%%~fa" "temp\%%~na_%%06d.png"

@@ -1,4 +1,4 @@
-@echo off & title å›¾ç‰‡è½¬ä¸º PDF (æ–‡ä»¶å¤¹å‘½å) By Sengoku v1.0
+@echo off & title Í¼Æ¬×ªÎª PDF (ÎÄ¼ş¼ĞÃüÃû) By Sengoku v1.0
 cd "%~dp1"
 magick "*.{png,jpeg,jpg}" -compress JPEG -quality 80 "outfile.pdf"
 for /f "delims=" %%i in ("%cd%") do set folder=%%~ni

@@ -1,15 +1,15 @@
-@echo off & title forå¾ªç¯æ‹¼æ¥å­—ç¬¦ä¸² jsort æ’åº
+@echo off & title forÑ­»·Æ´½Ó×Ö·û´® jsort ÅÅĞò
 
-REM å¼€å¯å»¶æ—¶å˜é‡
+REM ¿ªÆôÑÓÊ±±äÁ¿
 setlocal enabledelayedexpansion
 
 set var=
-REM å¼€å§‹å¾ªç¯
-REM findstr /r /i "png$ jpg$" è¿‡æ»¤ png å’Œ jpg
+REM ¿ªÊ¼Ñ­»·
+REM findstr /r /i "png$ jpg$" ¹ıÂË png ºÍ jpg
 for /f "delims=" %%i in ('dir /b /a-d %*^|findstr /r /i "png$ jpg$"^|jsort /n /i') do (
     echo "%%i"
     set var=!var!"%%i" 
 )
 
-echo æ‹¼æ¥ç»“æœ:"%var%"
+echo Æ´½Ó½á¹û:"%var%"
 pause

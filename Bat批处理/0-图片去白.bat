@@ -1,4 +1,4 @@
-@echo off & title å›¾ç‰‡å»é™¤ç™½è‰² By Sengoku v1.1
-REM ä¿®æ”¹åŒ¹é…ç¬¦(*.jpg)ä¸º(%*),åŒ¹é…æ‰€é€‰å¤šä¸ªæ–‡ä»¶
+@echo off & title Í¼Æ¬È¥³ı°×É« By Sengoku v1.1
+REM ĞŞ¸ÄÆ¥Åä·û(*.jpg)Îª(%*),Æ¥ÅäËùÑ¡¶à¸öÎÄ¼ş
 cd "%~dp1"
 for %%a in (%*) do magick "%%~fa" -fuzz 20%% -transparent white "%%~na_unmult.png"

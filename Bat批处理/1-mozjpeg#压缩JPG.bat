@@ -1,4 +1,4 @@
-@echo off & title Mozjpeg æ‰¹é‡å‹ç¼© JPG By Sengoku v1.0
+@echo off & title Mozjpeg ÅúÁ¿Ñ¹Ëõ JPG By Sengoku v1.0
 cd /d %1
 mkdir "mozjpeg"
 for %%A in (*.jpg) do (

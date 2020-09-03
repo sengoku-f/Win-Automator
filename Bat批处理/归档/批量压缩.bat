@@ -1,2 +1,2 @@
-@echo off & title 7z æ‰¹é‡å‹ç¼© By Sengoku v1.0
+@echo off & title 7z ÅúÁ¿Ñ¹Ëõ By Sengoku v1.0
 for /d %%X in (*) do "c:\Program Files\7-Zip\7z.exe" a "%%X.7z" "%%X\"
