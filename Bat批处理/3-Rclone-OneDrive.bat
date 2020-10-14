@@ -2,8 +2,8 @@
 REM 设置代理
 set http_proxy=socks5://127.0.0.1:1080
 set https_proxy=socks5://127.0.0.1:1080
-set http_proxy=http://127.0.0.1:1081
-set https_proxy=http://127.0.0.1:1081
+set http_proxy=http://127.0.0.1:1080
+set https_proxy=http://127.0.0.1:1080
 REM 开始同步 SendTo
 rclone sync "C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\SendTo" onedrive:"自动化\Windows 脚本\SendTo" -P --log-file="C:\Users\Administrator\Rclone_win.log" --include *.{bat}
 

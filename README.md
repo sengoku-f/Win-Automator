@@ -219,5 +219,5 @@ choco install 'ffmpeg' 'ImageMagick' 'UnxUtils' 'gifsicle' 'youtube-dl' 'ghostsc
 |        批量替换文件名字符.bat        | 批量替换当前目录下所有文件名字符 |
 
 ## 作者
-* SENGOKU donxj@live.com
+* SENGOKU i.donxj@gmail.com
 * 如果出现问题可以提 **issues** 或者联系我👆
